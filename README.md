@@ -48,31 +48,6 @@ It is meant to **showcase the concept** of our system with a clean UI and simula
 - **Modern styling** – Cards, shadows, rounded corners, hover effects.  
 - **Responsive** – Works on desktop & mobile.  
 
----
-
-bankshield-ai-prototype/
-│
-├── index.html # Main homepage/dashboard
-├── apk.html # APK analysis page
-├── transactions.html # Transaction analysis page
-├── laundering.html # Laundering system visualization
-├── alerts.html # Alerts & evidence timeline
-├── about.html # Closing/About page
-│
-├── css/
-│ └── style.css # Styling (dark theme + UI components)
-│
-├── js/
-│ └── app.js # JS logic (simulated detections)
-│
-├── assets/
-│ ├── demo.csv # Sample transaction data
-│ └── icons/ # Icons/images if needed
-│
-└── README.md # This file
-
----
-
 ## 🌐 Live Demo  
 👉 [Click here to view prototype](https://banksheild-ai.netlify.app/) 
 

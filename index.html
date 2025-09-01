@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BankShield AI - Cybersecurity Protection Platform</title>
+        <meta name="description" content="AI-powered cybersecurity platform for detecting banking fraud, preventing cyber threats, and empowering law enforcement">
+    <meta name="author" content="BankShield AI Team">
+    
+    <meta property="og:title" content="BankShield AI - From Fake Banking Apps to Catching Criminals">
+    <meta property="og:description" content="Advanced cybersecurity platform for banking fraud detection and prevention">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>BankShield AI</span>
+                </a>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <a href="index.html" class="nav-link active">Dashboard</a>
+                    <a href="apk-detection.html" class="nav-link">APK Analysis</a>
+                    <a href="transactions.html" class="nav-link">Transactions</a>
+                    <a href="laundering.html" class="nav-link">Laundering</a>
+                    <a href="alerts.html" class="nav-link">Alerts</a>
+                    <a href="about.html" class="nav-link">About</a>
+                </div>
+                
+                <button class="nav-toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-background"></div>
+            <div class="hero-overlay"></div>
+            
+            <div class="hero-content">
+                <div class="hero-icon">
+                    <i class="fas fa-shield-alt glow-strong"></i>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="text-primary">BankShield</span> AI
+                </h1>
+                
+                <p class="hero-subtitle">
+                    From Fake Banking Apps to Catching Criminals
+                </p>
+                
+                <p class="hero-tagline">
+                    Not just detection, but prevention + attribution.
+                </p>
+                
+                <button class="btn btn-primary btn-lg glow-primary" onclick="scrollToFeatures()">
+                    Explore Features
+                    <i class="fas fa-arrow-down"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Comprehensive Security Features</h2>
+                    <p class="section-description">
+                        Advanced AI-powered tools to detect, prevent, and investigate cyber threats
+                    </p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card card-cyber" onclick="navigateToPage('apk-detection.html')">
+                        <div class="feature-content">
+                            <div class="feature-icon">
+                                <i class="fas fa-search"></i>
+                                <span class="feature-emoji">🔍</span>
+                            </div>
+                            <h3 class="feature-title">APK Detection</h3>
+                            <p class="feature-description">
+                                Analyze mobile applications for malicious behavior and security threats
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card card-cyber" onclick="navigateToPage('alerts.html')">
+                        <div class="feature-content">
+                            <div class="feature-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span class="feature-emoji">🚨</span>
+                            </div>
+                            <h3 class="feature-title">Proactive Alerts</h3>
+                            <p class="feature-description">
+                                Real-time monitoring and instant notifications for suspicious activities
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card card-cyber" onclick="navigateToPage('alerts.html')">
+                        <div class="feature-content">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                                <span class="feature-emoji">🛑</span>
+                            </div>
+                            <h3 class="feature-title">Blocklist System</h3>
+                            <p class="feature-description">
+                                Comprehensive database of known malicious apps and entities
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card card-cyber" onclick="navigateToPage('transactions.html')">
+                        <div class="feature-content">
+                            <div class="feature-icon">
+                                <i class="fas fa-credit-card"></i>
+                                <span class="feature-emoji">💳</span>
+                            </div>
+                            <h3 class="feature-title">Suspicious Transactions</h3>
+                            <p class="feature-description">
+                                Advanced fraud detection and transaction monitoring
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card card-cyber" onclick="navigateToPage('laundering.html')">
+                        <div class="feature-content">
+                            <div class="feature-icon">
+                                <i class="fas fa-project-diagram"></i>
+                                <span class="feature-emoji">🔗</span>
+                            </div>
+                            <h3 class="feature-title">Laundering Detection</h3>
+                            <p class="feature-description">
+                                Track and visualize complex money laundering networks
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card card-cyber" onclick="navigateToPage('alerts.html')">
+                        <div class="feature-content">
+                            <div class="feature-icon">
+                                <i class="fas fa-user-check"></i>
+                                <span class="feature-emoji">👮‍♂️</span>
+                            </div>
+                            <h3 class="feature-title">Evidence for Cyber Police</h3>
+                            <p class="feature-description">
+                                Generate comprehensive reports for law enforcement
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+<p>Prototype built for CIIS Hackathon 2025  (NOTE THIS PROTOTYPE IS JUST FOR HAVING IDEA THIS IS NOT THE REAL MODEL)</p>                    <p class="footer-subtitle">Protecting Citizens, Empowering Cyber Police</p>
+                </div>
+                
+                <div class="footer-actions">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub Repo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

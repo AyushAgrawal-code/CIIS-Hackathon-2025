@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Laundering Network - BankShield AI</title>
+    <meta name="description" content="Visualize and track complex money laundering networks and transaction flows">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>BankShield AI</span>
+                </a>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <a href="index.html" class="nav-link">Dashboard</a>
+                    <a href="apk-detection.html" class="nav-link">APK Analysis</a>
+                    <a href="transactions.html" class="nav-link">Transactions</a>
+                    <a href="laundering.html" class="nav-link active">Laundering</a>
+                    <a href="alerts.html" class="nav-link">Alerts</a>
+                    <a href="about.html" class="nav-link">About</a>
+                </div>
+                
+                <button class="nav-toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="page-container">
+            <!-- Header -->
+            <div class="page-header">
+                <h1 class="page-title">Money Laundering Network Analysis</h1>
+                <p class="page-description">
+                    Visualize and track complex money laundering networks and suspicious transaction flows
+                </p>
+            </div>
+
+            <div class="grid laundering-grid gap-8">
+                <!-- Network Visualization -->
+                <div class="network-section">
+                    <div class="card card-cyber">
+                        <div class="card-header">
+                            <div class="card-title-section">
+                                <h3 class="card-title">
+                                    <i class="fas fa-project-diagram text-primary"></i>
+                                    Network Visualization
+                                </h3>
+                                <div class="card-actions">
+                                    <button class="btn btn-sm btn-primary" id="animate-btn" onclick="animateNetwork()">
+                                        <i class="fas fa-play"></i>
+                                        Animate
+                                    </button>
+                                    <button class="btn btn-sm btn-outline" onclick="resetNetwork()">
+                                        <i class="fas fa-redo"></i>
+                                        Reset
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="network-container">
+                                <canvas id="network-canvas" width="600" height="400"></canvas>
+                                <div class="network-legend">
+                                    <div class="legend-item">
+                                        <div class="legend-color safe"></div>
+                                        <span>Safe</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color suspicious"></div>
+                                        <span>Suspicious</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="network-help">Click on any node to view detailed information</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="sidebar-section">
+                    <!-- Node Details -->
+                    <div class="card card-cyber mb-6">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <i class="fas fa-info-circle text-primary"></i>
+                                Node Details
+                            </h3>
+                        </div>
+                        <div class="card-content">
+                            <div id="node-details">
+                                <div class="no-selection text-center p-8">
+                                    <i class="fas fa-project-diagram no-selection-icon"></i>
+                                    <p class="text-muted">Click on a node in the network to view details</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Network Statistics -->
+                    <div class="card card-cyber">
+                        <div class="card-header">
+                            <h3 class="card-title">Network Statistics</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="stats-list">
+                                <div class="stat-item">
+                                    <span class="stat-label">Total Nodes:</span>
+                                    <span class="stat-value" id="total-nodes">6</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Suspicious Nodes:</span>
+                                    <span class="stat-value text-destructive" id="suspicious-nodes">4</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Total Connections:</span>
+                                    <span class="stat-value" id="total-connections">5</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Suspicious Flows:</span>
+                                    <span class="stat-value text-destructive" id="suspicious-flows">4</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Total Amount:</span>
+                                    <span class="stat-value text-destructive" id="total-amount">₹2,98,000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alert Section -->
+            <div class="card card-danger mt-8">
+                <div class="card-header">
+                    <h3 class="card-title text-destructive">Laundering Pattern Detected</h3>
+                </div>
+                <div class="card-content">
+                    <div class="alert-content">
+                        <p class="alert-description">
+                            <strong>Network Analysis Complete:</strong> Suspicious money laundering activity 
+                            has been identified in this network.
+                        </p>
+                        <div class="grid grid-3 gap-4 mt-6">
+                            <div class="alert-detail">
+                                <h4 class="detail-title">Pattern Identified</h4>
+                                <p class="detail-text">
+                                    User → Multiple Mule Accounts → Fraudulent Merchants
+                                </p>
+                            </div>
+                            <div class="alert-detail">
+                                <h4 class="detail-title">Risk Level</h4>
+                                <p class="detail-text">
+                                    🚨 High - Immediate investigation required
+                                </p>
+                            </div>
+                            <div class="alert-detail">
+                                <h4 class="detail-title">Evidence Status</h4>
+                                <p class="detail-text">
+                                    📋 Compiled and sent to Cyber Police
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+<p>Prototype built for CIIS Hackathon 2025  (NOTE THIS PROTOTYPE IS JUST FOR HAVING IDEA THIS IS NOT THE REAL MODEL)</p>                    <p class="footer-subtitle">Protecting Citizens, Empowering Cyber Police</p>
+                </div>
+                
+                <div class="footer-actions">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub Repo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/laundering.js"></script>
+</body>
+</html>
